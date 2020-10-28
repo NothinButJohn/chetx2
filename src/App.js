@@ -1,25 +1,23 @@
 import React, { Component, useState } from 'react';
+import Header from './components/Header'
+import Home from './components/Home'
+import Tyler from './components/Tyler'
+import Navigation from './components/Navigation'
+import {BrowserRouter as Router, Route} from 'react-router-dom'
+import * as ROUTES from './routes'
 
 function App(){
   return(
-    <div>
-      <h1>App</h1>
-      <Counter />
-    </div>
+    <Router>
+      <div>
+        <Header />
+        <Navigation />
+      </div>
+    </Router>
   )
 }
 
-function Counter() {
-  const [counter, setCounter] = useState(0); // State: counter value, init 0
-  const increment = () => { // Action: updates the counter 
-    setCounter(prevCounter => prevCounter + 1);
-  }
-  // View: UI def
-  return (
-    <div>
-      Value: {counter} <button onClick={increment}>Increment</button>
-    </div>
-  )
-}
+
 
 export default App;
+ 
