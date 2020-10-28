@@ -1,10 +1,11 @@
 import React, { Component, useState } from 'react';
-import Header from './Header';
+import Table from './Table'
 
 function Home(){
     return(
         <div>
             <Counter />
+            <Table />
         </div>
     )
 }
